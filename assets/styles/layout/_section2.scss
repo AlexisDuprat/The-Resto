@@ -1,0 +1,131 @@
+.section2 {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  padding: 70px 0 120px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    background: url("../../../assets/img/bg-menu-01.jpg") center/cover;
+    width: 100%;
+    height: 670px;
+    left: 50%;
+    bottom: -325px;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    padding-bottom: 40px;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 850px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 430px) {
+      width: 100%;
+    }
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+
+    li {
+      padding: 20px 0;
+      position: relative;
+
+      a {
+        padding: 20px 0;
+
+        &::after {
+          content: "";
+          position: absolute;
+          background: $white1;
+          height: 1px;
+          width: 100%;
+          bottom: 10px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+
+  .menu {
+    border-top: 5px solid $gold;
+    background: $white1;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-top: 15px;
+    text-align: left;
+
+    .repas {
+      display: grid;
+      align-items: center;
+      grid-template-columns: 115px 1fr 40px;
+      border-bottom: 1px dashed $gold;
+      margin: 15px;
+      padding: 10px 0 35px;
+
+      img {
+        border-radius: 50%;
+      }
+
+      h3 {
+        text-transform: uppercase;
+        font-size: 0.8rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+        text-transform: capitalize;
+      }
+
+      span {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: $gold;
+        font-family: $font4;
+      }
+    }
+
+    @media screen and (max-width: 780px) {
+      grid-template-columns: 1fr;
+
+      .repas {
+        grid-template-columns: 1fr 1fr 1fr;
+        text-align: center;
+
+        img {
+          margin: 0 auto;
+        }
+      }
+    }
+
+    @media screen and (max-width: 430px) {
+      .repas {
+        margin: 10px 5px;
+        grid-template-columns: 80px 1fr 40px;
+
+        img {
+          width: 80px;
+        }
+
+        div {
+          padding: 0 10px;
+        }
+
+        span {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+}

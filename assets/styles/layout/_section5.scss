@@ -1,0 +1,85 @@
+.section5 {
+  @include center;
+  padding: 50px 0 170px;
+  position: relative;
+  overflow: hidden;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+
+  &::before {
+    top: -50%;
+    background: $black2;
+    z-index: 2;
+  }
+
+  &::after {
+    bottom: -30%;
+    background: url(../../../assets/img/gmap.jpg) center/cover;
+    z-index: 1;
+  }
+
+  .citation {
+    width: 85%;
+    max-width: 900px;
+    background: $white1;
+    position: relative;
+    z-index: 5;
+
+    @media screen and (max-width: 510px) {
+      width: 95%;
+    }
+
+    padding: 60px 20px 50px;
+
+    img {
+      width: 60px;
+      position: absolute;
+      border-radius: 50%;
+      left: 50%;
+      transform: translate(-50%);
+      top: -30px;
+    }
+
+    p {
+      width: 90%;
+      margin: 0 auto;
+      position: relative;
+      line-height: 30px;
+
+      &::before {
+        content: "❝ ";
+      }
+
+      &::after {
+        content: " ❞";
+      }
+
+      &::after,
+      &::before {
+        font-size: 1.2rem;
+        font-weight: bold;
+        transform: translateY(-5px);
+      }
+
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      font-weight: bold;
+      text-transform: capitalize;
+      margin: 30px 0 15px;
+    }
+
+    h4 {
+      font-size: 0.9rem;
+      color: $gold;
+      text-transform: capitalize;
+    }
+  }
+}
