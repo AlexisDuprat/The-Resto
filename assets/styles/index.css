@@ -271,7 +271,7 @@ header nav #pages li::before {
   content: "";
   position: absolute;
   background-color: #eeeeee;
-  top: 12px;
+  bottom: 12px;
   left: 50%;
   -webkit-transform: translate(-50%);
       -ms-transform: translate(-50%);
